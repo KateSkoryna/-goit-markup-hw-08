@@ -1,0 +1,39 @@
+/* Стилизация секции партнеры */
+
+.clients {
+    display: flex;
+}
+
+.clients__item {
+    @extend %flex-center;
+
+    &:not(:nth-child(6n)) {
+        margin-right: 30px;
+    }
+}
+
+.clients__link {
+    @extend %flex-center;
+
+    transition-property: color, border;
+    transition-duration: var(--transition-duration);
+    transition-timing-function: var(--transition-timing-function);
+
+    width: 170px;
+    height: 92px;
+
+    border: 1px solid #afb1b8;
+    border-radius: 4px;
+    color: var(--team-icon-color);
+
+    &:hover,
+    &:focus {
+        color: var(--acent-color);
+        border: 1px solid var(--acent-color);
+    }
+}
+
+.clients__icon {
+    fill: currentColor;
+}
+
