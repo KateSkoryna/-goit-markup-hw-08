@@ -1,9 +1,9 @@
 /* Стилизация Чем мы занимаемся */
-.service {
-    padding-top: 0;
-}
+@media screen and (max-width: 1199px) {
 
-.service__list {
+}
+@media screen and (min-width:1200px) {
+.service {
     display: flex;
 }
 
@@ -39,4 +39,5 @@
     font-weight: var(--font-weight);
     text-transform: uppercase;
     text-align: center;
+}
 }

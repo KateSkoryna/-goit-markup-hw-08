@@ -5,7 +5,8 @@
     transition-duration: var(--transition-duration);
     transition-timing-function: var(--transition-timing-function);
 
-   
+   padding-top: 24px;
+   padding-bottom: 24px;
     color: var(--acent-color);
     font-family: var(--second-font);
     @include font-style (700, 24px, 28px, 0.03em);
@@ -21,8 +22,6 @@
 
 .logo--dark {
     color: #000;
-    padding-top: 24px;
-    padding-bottom: 24px;
 }
 
 /* Часть логотипа в футере */

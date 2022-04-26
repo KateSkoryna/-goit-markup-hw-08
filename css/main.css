@@ -114,6 +114,7 @@ img {
 }
 
 .section--top-zero {
+  display: none;
   padding-top: 0;
 }
 
@@ -125,6 +126,10 @@ img {
   .section {
     padding-top: 94px;
     padding-bottom: 94px;
+  }
+  .section--top-zero {
+    display: block;
+    padding-top: 0;
   }
 }
 
@@ -180,6 +185,8 @@ img {
   transition-property: text-decotation;
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--transition-timing-function);
+  padding-top: 24px;
+  padding-bottom: 24px;
   color: var(--acent-color);
   font-family: var(--second-font);
   font-weight: 700;
@@ -202,8 +209,6 @@ img {
 
 .logo--dark {
   color: #000;
-  padding-top: 24px;
-  padding-bottom: 24px;
 }
 
 /* Часть логотипа в футере */
@@ -807,6 +812,12 @@ img {
   letter-spacing: 0.03em;
 }
 
+@media screen and (max-width: 767px) {
+  .features__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .features {
     display: flex;
@@ -837,51 +848,42 @@ img {
 }
 
 /* Стилизация Чем мы занимаемся */
-.service {
-  padding-top: 0;
-}
-
-.service__list {
-  display: flex;
-}
-
-.service__item {
-  position: relative;
-  display: flex;
-  align-items: flex-end;
-  flex-wrap: wrap;
-}
-
-.service__item:not(:last-child) {
-  margin-right: 30px;
-}
-
-.service__title {
-  position: absolute;
-  z-index: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  width: 100%;
-  height: 70px;
-  color: var(--secondary-text-color);
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.8), rgba(10, 11, 15, 0.8));
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: var(--letter-spacing-base);
-  font-weight: var(--font-weight);
-  text-transform: uppercase;
-  text-align: center;
+@media screen and (min-width: 1200px) {
+  .service {
+    display: flex;
+  }
+  .service__item {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+  }
+  .service__item:not(:last-child) {
+    margin-right: 30px;
+  }
+  .service__title {
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+    height: 70px;
+    color: var(--secondary-text-color);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.8), rgba(10, 11, 15, 0.8));
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: var(--letter-spacing-base);
+    font-weight: var(--font-weight);
+    text-transform: uppercase;
+    text-align: center;
+  }
 }
 
 /* Стилизация команды */
-.team-card {
-  display: flex;
-}
-
 .team-card__item {
-  width: calc((100% - 90px) / 3);
+  width: 100%;
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   background-color: var(--secondary-text-color);
@@ -889,7 +891,12 @@ img {
 }
 
 .team-card__item:not(:last-child) {
-  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+.team-card__img {
+  width: 450px;
+  height: 450px;
 }
 
 .team-discription {
@@ -902,10 +909,37 @@ img {
 .team-discription__title {
   margin-bottom: 10px;
   color: var(--extra-text-color);
-  font-size: 16px;
   font-weight: 500;
+  font-size: 16px;
   line-height: 1.19;
-  letter-spacing: var(--letter-spacing-base);
+  letter-spacing: 0.03em;
+}
+
+.team-discription__text {
+  margin-bottom: 16px;
+  color: var(--text-color);
+  font-size: 16px;
+  line-height: 1.19;
+}
+
+@media screen and (min-width: 768px) {
+  .team-card {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .team-card__item {
+    width: calc((100% - 90px) / 3);
+  }
+  .team-card__item:not(:last-child) {
+    margin-right: 30px;
+  }
+  .team-card__img {
+    width: 279px;
+    height: 260px;
+  }
 }
 
 .team-discription__text {
@@ -1137,6 +1171,9 @@ img {
   .address-block {
     flex-grow: 1;
     margin-right: 70px;
+  }
+  .subscribe-title {
+    text-align: left;
   }
   .subscribe-media {
     margin-bottom: 0;
