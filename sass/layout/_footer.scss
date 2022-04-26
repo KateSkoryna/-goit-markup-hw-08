@@ -6,6 +6,10 @@
     padding-bottom: 60px;
 }
 
+.address-block {
+    margin-bottom: 60px;
+}
+
 .address {
     margin-top: 20px;
     font-style: normal;
@@ -50,6 +54,10 @@
     font-weight: var(--font-weight);
     line-height: 1.14;
     letter-spacing: var(--letter-spacing-base);
+}
+
+.subscribe-media {
+    margin-bottom: 60px;
 }
 
 .subscribe-form__input {
@@ -138,7 +146,7 @@
 
 @media screen and (min-width:1200px) {
 
-    .address {
+.address {
         margin-bottom: 0;
     }
 

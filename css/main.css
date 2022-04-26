@@ -895,19 +895,14 @@ img {
   text-align: center;
 }
 
-.team-card__item:not(:last-child) {
-  margin-bottom: 30px;
-}
-
 .team-card__img {
   width: 450px;
-  height: 450px;
 }
 
 .team-discription {
   padding-top: 30px;
   padding-right: 32px;
-  padding-bottom: 30px;
+  padding-bottom: 24px;
   padding-left: 32px;
 }
 
@@ -927,31 +922,36 @@ img {
   line-height: 1.19;
 }
 
+@media screen and (max-width: 767px) {
+  .team-card__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .team-card {
     display: flex;
     flex-wrap: wrap;
+    margin: -15px;
+  }
+  .team-card__item {
+    width: 354px;
+    margin: 15px;
   }
 }
 
 @media screen and (min-width: 1200px) {
+  .team-card {
+    display: flex;
+    flex-wrap: nowrap;
+  }
   .team-card__item {
     width: calc((100% - 90px) / 3);
-  }
-  .team-card__item:not(:last-child) {
-    margin-right: 30px;
   }
   .team-card__img {
     width: 279px;
     height: 260px;
   }
-}
-
-.team-discription__text {
-  margin-bottom: 16px;
-  color: var(--text-color);
-  font-size: 16px;
-  line-height: 1.19;
 }
 
 /* Стилизация списка социальных сетей на странице */
@@ -1043,6 +1043,10 @@ img {
   padding-bottom: 60px;
 }
 
+.address-block {
+  margin-bottom: 60px;
+}
+
 .address {
   margin-top: 20px;
   font-style: normal;
@@ -1090,6 +1094,10 @@ img {
   font-weight: var(--font-weight);
   line-height: 1.14;
   letter-spacing: var(--letter-spacing-base);
+}
+
+.subscribe-media {
+  margin-bottom: 60px;
 }
 
 .subscribe-form__input {
