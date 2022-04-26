@@ -8,7 +8,6 @@
 
 .address {
     margin-top: 20px;
-    margin-bottom: 60px;
     font-style: normal;
     line-height: 1.71;
 }
@@ -39,10 +38,6 @@
 
 .address__link--white {
     color: var(--secondary-text-color);
-}
-
-.subscribe-media {
-    margin-bottom: 60px;
 }
 
 .subscribe-title {
@@ -125,11 +120,13 @@
 .footer-flex {
     display: flex;
     flex-wrap: wrap;
+    align-items: baseline;
     justify-content: center;
 }
 
 .address-block {
     margin-right: 165px;
+    margin-bottom: 60px;
 }
 
 .subscribe-form__input {

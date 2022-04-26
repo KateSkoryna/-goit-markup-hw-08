@@ -185,8 +185,6 @@ img {
   transition-property: text-decotation;
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--transition-timing-function);
-  padding-top: 24px;
-  padding-bottom: 24px;
   color: var(--acent-color);
   font-family: var(--second-font);
   font-weight: 700;
@@ -204,6 +202,13 @@ img {
     line-height: 1.19;
     letter-spacing: 0.03em;
     text-align: left;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .logo {
+    padding-top: 24px;
+    padding-bottom: 24px;
   }
 }
 
@@ -1040,7 +1045,6 @@ img {
 
 .address {
   margin-top: 20px;
-  margin-bottom: 60px;
   font-style: normal;
   line-height: 1.71;
 }
@@ -1074,10 +1078,6 @@ img {
 
 .address__link--white {
   color: var(--secondary-text-color);
-}
-
-.subscribe-media {
-  margin-bottom: 60px;
 }
 
 .subscribe-title {
@@ -1148,10 +1148,12 @@ img {
   .footer-flex {
     display: flex;
     flex-wrap: wrap;
+    align-items: baseline;
     justify-content: center;
   }
   .address-block {
     margin-right: 165px;
+    margin-bottom: 60px;
   }
   .subscribe-form__input {
     width: 450px;
