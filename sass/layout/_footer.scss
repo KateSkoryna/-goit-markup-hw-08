@@ -1,4 +1,4 @@
-/* Стилизация подвала */
+// Стилизация для телефона
 
 .footer {
     background-color: var(--section--bg-color);
@@ -6,79 +6,55 @@
     padding-bottom: 60px;
 }
 
-.footer-flex {
-    display: flex;
-    align-items: baseline;
-}
-
-/* Стилизация адреса */
-
-.address-block {
-    flex-grow: 1;
-    margin-right: 70px;
-}
-
 .address {
     margin-top: 20px;
+    margin-bottom: 60px;
     font-style: normal;
     line-height: 1.71;
 }
 
 .address__item:not(:last-child) {
-    margin-bottom: 9px;
+    margin-bottom: 8px;
 }
 
 .address__link {
+    display: block;
     transition-property: color;
     transition-duration: var(--transition-duration);
     transition-timing-function: var(--transition-timing-function);
-    color: var(--secondary-text-color);
-
-    &:hover,
-    &:focus {
-        color: var(--acent-color);
-    }
-}
-
-/* Стилизация почты и телефона */
-
-.address__contact {
-    transition-property: color;
-    transition-duration: var(--transition-duration);
-    transition-timing-function: var(--transition-timing-function);
-
     color: rgba(255, 255, 255, 0.6);
-    text-decoration: none;
+
+    @include font-style (400, 14px, 24px, 0.03em);
+    text-align: center;
 
     &:hover,
     &:focus {
         color: var(--acent-color);
     }
+
+    @media screen and (min-width:1200px) {
+        text-align: left;
+    }
 }
 
-/* Стилизация заголовка в футере */
+.address__link--white {
+    color: var(--secondary-text-color);
+}
+
+.subscribe-media {
+    margin-bottom: 60px;
+}
 
 .subscribe-title {
     display: block;
     margin-bottom: 20px;
     color: var(--secondary-text-color);
     font-family: inherit;
+    text-transform: uppercase;
+    text-align: center;
     font-weight: var(--font-weight);
     line-height: 1.14;
     letter-spacing: var(--letter-spacing-base);
-    text-transform: uppercase;
-}
-
-/* Стилизация формы в футебер */
-
-.subscribe-form {
-    display: block;
-    width: 570px;
-    margin-left: 93px;
-}
-
-.subscribe-form__block {
-    display: flex;
 }
 
 .subscribe-form__input {
@@ -86,9 +62,9 @@
     transition-duration: var(--transition-duration);
     transition-timing-function: var(--transition-timing-function);
 
-    width: 358px;
+    width: 100%;
     padding: 15px 15px 15px 15px;
-    margin-right: 12px;
+    margin-bottom: 20px;
 
     color: var(--secondary-text-color);
     background-color: transparent;
@@ -119,6 +95,9 @@
     border-color: transparent;
     border-radius: 4px;
 
+    margin-left: auto;
+    margin-right: auto;
+
     color: var(--secondary-text-color);
     background-color: var(--acent-color);
 
@@ -140,3 +119,59 @@
     fill: currentColor;
 }
 
+// Стилизация для планшета
+
+@media screen and (min-width:768px) {
+.footer-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.address-block {
+    margin-right: 165px;
+}
+
+.subscribe-form__input {
+    width: 450px;
+}
+}
+
+/* Стилизация подвала для десктопа */
+
+@media screen and (min-width:1200px) {
+
+    .address {
+        margin-bottom: 0;
+    }
+
+.footer-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.address-block {
+    flex-grow: 1;
+    margin-right: 70px;
+}
+
+.subscribe-media {
+    margin-bottom: 0;
+}
+
+.subscribe-form {
+    display: block;
+    width: 570px;
+    margin-left: 93px;
+}
+
+.subscribe-form__block {
+    display: flex;
+}
+
+.subscribe-form__input {
+margin-right: 12px;
+margin-bottom: 0;
+}
+}

@@ -1,0 +1,119 @@
+// Мобильное меню в хедере
+
+@media screen and (max-width: 767px) {
+
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--secondary-text-color);
+    overflow: scroll;
+    opacity: 0;
+    pointer-events: none;
+    transition-duration: 250ms;
+
+    &.is-open {
+        opacity: 1;
+        pointer-events: auto;
+    }
+}
+
+.mobile-menu__container {
+    position: relative;
+    padding-left: 40px;
+    padding-top: 48px;
+    padding-bottom: 48px;
+}
+
+.mobile-menu__close-btn {
+    position: absolute;
+    @include position(10px, 15px);
+
+    transition-property: transform;
+    transition-duration: var(--transition-duration);
+    transition-timing-function: var(--transition-timing-function);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include size(40px, 40px);
+    background-color: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    cursor: pointer;
+    color: #000;
+    outline: none;
+
+    &:hover,
+    &:focus {
+        color: var(--acent-color);
+    }
+}
+
+.mobile-menu__close-icon {
+    fill: currentColor;
+}
+
+.mobile-menu__list {
+    margin-bottom: 306px;
+}
+
+.mobile-menu__item:not(:last-child) {
+    margin-bottom: 32px;
+}
+
+.mobile-menu__link {
+    color: var(--extra-text-color);
+    @include font-style (500, 40px, 47px, 0.02em);
+
+    &:hover,
+    &:focus {
+        color: var(--acent-color);
+    }
+}
+
+.mobile-menu__contact-list {
+    margin-bottom: 64px;
+}
+
+.mobile-menu__contact-item:not(:last-child) {
+    margin-bottom: 32px;
+}
+
+.mobile-menu__contact-link--accent {
+    color: var(--acent-color);
+
+    @include font-style (500, 34px, 40px, 0.02em);
+}
+
+.mobile-menu__contact-link {
+    color: var(--text-color);
+
+    @include font-style (500, 24px, 28px, 0.02em);
+}
+
+.mobile-menu__social-media-list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.mobile-menu__socia-media-item:not(:last-child) {
+    margin-right: 20px;
+}
+
+.mobile-menu__social-media-link {
+    color: var(--acent-color);
+
+    @include font-style (500, 18px, 22px, 0.02em);
+}
+}
+
+@media screen and (min-width: 768px) {
+    .mobile-menu {
+        display: none;
+    }
+}

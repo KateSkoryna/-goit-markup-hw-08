@@ -9,3 +9,11 @@
     justify-content: center;
     align-items: center;
 }
+
+%btn {
+    min-width: 200px;
+    border-color: transparent;
+    border-radius: 4px;
+    color: var(--secondary-text-color);
+    background-color: var(--acent-color);
+}

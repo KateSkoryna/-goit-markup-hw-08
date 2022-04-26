@@ -41,9 +41,45 @@
                     </svg>+38 096 111 11 11</a>
             </li>
         </ul>
+
+        <!--Кнопка меню в мобильной версии-->
+        
+        <button class="menu-btn" type="button" data-menu-open>
+            <svg class="menu-btn__icon" width="40" height="40">
+                <use href="./images/icons.svg#icon-menu">
+                </use>
+            </svg>
+        </button>
+
+        <!--Мобильное меню в хедере-->
+
+        <div class="mobile-menu" data-menu>
+            <div class="container mobile-menu__container">
+                <ul class="mobile-menu__list">
+                    <li class="mobile-menu__item"><a href="/" class="mobile-menu__link">Студия</a></li>
+                    <li class="mobile-menu__item"><a href="/" class="mobile-menu__link">Портфолио</a></li>
+                    <li class="mobile-menu__item"><a href="/" class="mobile-menu__link">Контакты</a></li>
+                </ul>
+                <ul class="mobile-menu__contact-list">
+                    <li class="mobile-menu__contact-item"><a href="tel:+380961111111" class="mobile-menu__contact-link--accent">+38 096 111 11 11</a></li>
+                    <li class="mobile-menu__contact-item"><a href="mailto:info@devstudio.com" class="mobile-menu__contact-link">info@devstudio.com</a></li>
+                </ul>
+                <ul class="mobile-menu__social-media-list">
+                    <li class="mobile-menu__socia-media-item"><a href="/" class="mobile-menu__social-media-link">Instagram</a></li>
+                    <li class="mobile-menu__socia-media-item"><a href="/" class="mobile-menu__social-media-link">Facebook</a></li>
+                    <li class="mobile-menu__socia-media-item"><a href="/" class="mobile-menu__social-media-link">Twitter</a></li>
+                    <li class="mobile-menu__socia-media-item"><a href="/" class="mobile-menu__social-media-link">Linkedin</a></li>
+                </ul>
+                <button class="mobile-menu__close-btn" type="button" data-menu-close>
+                    <svg class="mobile-menu__close-icon" width="40" height="40">
+                        <use href="./images/icons.svg#close-icon"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
         </div>
     </header>
-    <!--Основной раздел страницы-->
+    <!-- Основной раздел страницы -->
     <main>
         <!--Главный заголовок и активная кнопка-->
         <section class="main">
@@ -52,6 +88,11 @@
                 <button class="main__button" type="button" data-modal-open>Заказать услугу</button>
                 <div class="backdrop is-hidden" data-modal>
                     <div class="modal">
+                        <button class="modal__close-btn" data-modal-close>
+                            <svg class="modal__close-icon" width="18" height="18">
+                                <use href="./images/icons.svg#close-icon"></use>
+                            </svg>
+                        </button>
                         <form name="main-form" class="main-form">
                             <div class="main-form-block">
                                 <b class="main-form__title">Оставьте свои данные, мы вам перезвоним</b>
@@ -88,14 +129,9 @@
                                         <a href="/" class="form-policy__link">Условия договора</a>
                                     </label>
                                 </div>
-                                <button class="main-form__btn" type="submit">Отправить</button>
+                                <button class="main__button" type="submit">Отправить</button>
                             </div>
                         </form>
-                        <button class="close-btn" data-modal-close>
-                            <svg class="close-btn__icon" width="18" height="18">
-                                <use href="./images/icons.svg#close-icon"></use>
-                            </svg>
-                        </button>
                     </div>
                 </div>
             </div>
@@ -145,7 +181,7 @@
             </div>
         </section>
         <!--Чем мы занимаемся-->
-        <section class="section section--top-zero">
+        <!-- <section class="section section--top-zero">
             <div class="container">
                 <h2 class="section__title">Чем мы занимаемся</h2>
                 <ul class="service__list">
@@ -170,9 +206,9 @@
                     </li>
                 </ul>
             </div>
-        </section>
+        </section> -->
         <!--Наша команда-->
-        <section class="section section--other-bg">
+        <!-- <section class="section section--other-bg">
             <div class="container">
                 <h2 class="section__title">Наша команда</h2>
                 <ul class="team-card list">
@@ -325,7 +361,7 @@
                     </li>
                 </ul>
             </div>
-        </section>
+        </section> -->
         <section class="section">
             <div class="container">
                 <h2 class="section__title">Постояннные клиенты</h2>
@@ -382,17 +418,17 @@
     <footer class="footer">
         <div class="container footer-flex">
             <div class="address-block">
-                <!--Название с активной ссылкой-->
+                <!-- Название с активной ссылкой-->
                 <a class="logo" href="/">Web<span class="logo--light">Studio</span></a>
-                <!--Адресс и Контакты-->
+                <!-- Адресс и Контакты -->
                 <address class="address">
                     <ul class="address__list">
-                        <li class="address__item"> <a class="address__link" href="https://goo.gl/maps/YrUc46Xhu9acLL3k6">г. Киев,
-                                пр-т Леси Украинки, 26</a>
+                        <li class="address__item"> <a class="address__link address__link--white" href="https://goo.gl/maps/YrUc46Xhu9acLL3k6">г. Киев,
+                                пр-т Леси Украинки,26</a>
                         </li>
-                        <li class="address__item"><a class="address__contact" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                        <li class="address__item"><a class="address__link" href="mailto:info@devstudio.com">info@devstudio.com</a>
                         </li>
-                        <li class="address__item"><a class="address__contact" href="tel:+380961111111">+38 096 111 11 11</a></li>
+                        <li class="address__item"><a class="address__link" href="tel:+380961111111">+38 096 111 11 11</a></li>
                     </ul>
                 </address>
             </div>
@@ -439,11 +475,11 @@
                         </svg>
                     </button>
                 </div>
-            </form>
-            
+            </form> 
         </div>
-    </footer>
+    </footer> 
     <!-- Скрипт для модального окна -->
-    <script src="./modal.js"></script>
+    <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
 </body>
 </html>

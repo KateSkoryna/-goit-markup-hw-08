@@ -1,29 +1,33 @@
 /* Стилизация логотипа в шапке */
 .logo {
+    display: block;
     transition-property: text-decotation;
     transition-duration: var(--transition-duration);
     transition-timing-function: var(--transition-timing-function);
 
-    padding-top: 24px;
-    padding-bottom: 24px;
+   
     color: var(--acent-color);
     font-family: var(--second-font);
-    font-size: 26px;
-    line-height: 1.19;
-    letter-spacing: var(--letter-spacing-base);
-    font-weight: var(--font-weight);
-    font-size: 26px;
+    @include font-style (700, 24px, 28px, 0.03em);
+    text-align: center;
+
     text-decoration: none;
+
+    @media screen and (min-width: 1200px) {
+        @include font-style (700, 26px, 31px, 0.03em);
+        text-align: left;
+    }
 }
 
 .logo--dark {
     color: #000;
+    padding-top: 24px;
+    padding-bottom: 24px;
 }
 
 /* Часть логотипа в футере */
 
 .logo--light {
-    margin-bottom: 20px;
     color: #fff;
     font-family: var(--second-font);
 }

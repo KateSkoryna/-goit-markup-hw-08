@@ -21,8 +21,8 @@
                 <a class="logo" href="./index.html">Web<span class="logo--dark">Studio</span></a>
                 <!--Панель навигации-->
                 <ul class="page-nav__list">
-                    <li class="page-nav__item"><a class="page-nav__link page-nav__link--currant" href="/">Студия</a> </li>
-                    <li class="page-nav__item"><a class="page-nav__link " href="./portfolio.html">Портфолио</a></li>
+                    <li class="page-nav__item"><a class="page-nav__link" href="./index.html">Студия</a> </li>
+                    <li class="page-nav__item"><a class="page-nav__link page-nav__link--currant" href="/">Портфолио</a></li>
                     <li class="page-nav__item"><a class="page-nav__link" href="#">Контакты</a></li>
                 </ul>
             </nav>
@@ -41,6 +41,48 @@
                         </svg>+38 096 111 11 11</a>
                 </li>
             </ul>
+    
+            <!--Кнопка меню в мобильной версии-->
+    
+            <button class="menu-btn" type="button" data-menu-open>
+                <svg class="menu-btn__icon" width="40" height="40">
+                    <use href="./images/icons.svg#icon-menu">
+                    </use>
+                </svg>
+            </button>
+    
+            <!--Мобильное меню в хедере-->
+    
+            <div class="mobile-menu" data-menu>
+                <div class="container mobile-menu__container">
+                    <ul class="mobile-menu__list">
+                        <li class="mobile-menu__item"><a href="/" class="mobile-menu__link">Студия</a></li>
+                        <li class="mobile-menu__item"><a href="/" class="mobile-menu__link">Портфолио</a></li>
+                        <li class="mobile-menu__item"><a href="/" class="mobile-menu__link">Контакты</a></li>
+                    </ul>
+                    <ul class="mobile-menu__contact-list">
+                        <li class="mobile-menu__contact-item"><a href="tel:+380961111111"
+                                class="mobile-menu__contact-link--accent">+38 096 111 11 11</a></li>
+                        <li class="mobile-menu__contact-item"><a href="mailto:info@devstudio.com"
+                                class="mobile-menu__contact-link">info@devstudio.com</a></li>
+                    </ul>
+                    <ul class="mobile-menu__social-media-list">
+                        <li class="mobile-menu__socia-media-item"><a href="/"
+                                class="mobile-menu__social-media-link">Instagram</a></li>
+                        <li class="mobile-menu__socia-media-item"><a href="/"
+                                class="mobile-menu__social-media-link">Facebook</a></li>
+                        <li class="mobile-menu__socia-media-item"><a href="/"
+                                class="mobile-menu__social-media-link">Twitter</a></li>
+                        <li class="mobile-menu__socia-media-item"><a href="/"
+                                class="mobile-menu__social-media-link">Linkedin</a></li>
+                    </ul>
+                    <button class="mobile-menu__close-btn" type="button" data-menu-close>
+                        <svg class="mobile-menu__close-icon" width="40" height="40">
+                            <use href="./images/icons.svg#close-icon"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
         </div>
     </header>
     <main>
@@ -200,19 +242,19 @@
     <footer class="footer">
         <div class="container footer-flex">
             <div class="address-block">
-                <!--Название с активной ссылкой-->
+                <!-- Название с активной ссылкой-->
                 <a class="logo" href="/">Web<span class="logo--light">Studio</span></a>
-                <!--Адресс и Контакты-->
+                <!-- Адресс и Контакты -->
                 <address class="address">
                     <ul class="address__list">
-                        <li class="address__item"> <a class="address__link" href="https://goo.gl/maps/YrUc46Xhu9acLL3k6">г.
-                                Киев,
-                                пр-т Леси Украинки, 26</a>
+                        <li class="address__item"> <a class="address__link address__link--white"
+                                href="https://goo.gl/maps/YrUc46Xhu9acLL3k6">г. Киев,
+                                пр-т Леси Украинки,26</a>
                         </li>
-                        <li class="address__item"><a class="address__contact"
+                        <li class="address__item"><a class="address__link"
                                 href="mailto:info@devstudio.com">info@devstudio.com</a>
                         </li>
-                        <li class="address__item"><a class="address__contact" href="tel:+380961111111">+38 096 111 11 11</a>
+                        <li class="address__item"><a class="address__link" href="tel:+380961111111">+38 096 111 11 11</a>
                         </li>
                     </ul>
                 </address>
@@ -261,7 +303,6 @@
                     </button>
                 </div>
             </form>
-    
         </div>
     </footer>
 </body>

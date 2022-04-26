@@ -1,0 +1,28 @@
+// Кнопка меню на мобильном телефоне
+@media screen and (max-width: 767px) {
+.menu-btn {
+    display: block;
+    background-color: transparent;
+    color: #000;
+    border: none;
+    padding: 0;
+    line-height: 0;
+    outline: none;
+
+    &:hover,
+    &:focus {
+        color: var(--acent-color);
+    }
+}
+}
+
+.menu-btn__icon {
+    fill: currentColor;
+}
+
+
+@media screen and (min-width: 768px) {
+    .menu-btn, .menu-btn__icon {
+display: none;
+    }
+}
