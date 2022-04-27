@@ -352,6 +352,7 @@ img {
     height: 100vh;
     background-color: var(--secondary-text-color);
     overflow: scroll;
+    z-index: 100;
     opacity: 0;
     pointer-events: none;
     transition-duration: 250ms;
