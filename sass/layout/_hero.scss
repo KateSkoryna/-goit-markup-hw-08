@@ -8,7 +8,7 @@
         background-image: linear-gradient(to right,
                 rgba(47, 48, 58, 0.4),
                 rgba(47, 48, 58, 0.4)),
-            url(/images/main-img/main-img-phone/header-phone.jpg);
+            url(../images/main-img/main-img-phone/header-phone.jpg);
         background-color: #c4c4c4;
         background-size: cover;
         background-position: center;
@@ -24,7 +24,7 @@
             background-image: linear-gradient(to right,
                     rgba(47, 48, 58, 0.4),
                     rgba(47, 48, 58, 0.4)),
-                url(/images/main-img/main-img-phone/header-phone@2x.jpg);
+                url(../images/main-img/main-img-phone/header-phone@2x.jpg);
         }
     }
 }
@@ -36,7 +36,7 @@
         background-image: linear-gradient(to right,
                 rgba(47, 48, 58, 0.4),
                 rgba(47, 48, 58, 0.4)),
-            url(/images/main-img/main-img-tbl/header-tbl.jpg);
+            url(../images/main-img/main-img-tbl/header-tbl.jpg);
     }
 
     @media (min-device-pixel-ratio: 2),
@@ -46,7 +46,7 @@
             background-image: linear-gradient(to right,
                     rgba(47, 48, 58, 0.4),
                     rgba(47, 48, 58, 0.4)),
-                url(/images/main-img/main-img-tbl/header-tbl@2x.jpg);
+                url(../images/main-img/main-img-tbl/header-tbl@2x.jpg);
         }
     }
 }
