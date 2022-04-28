@@ -1,4 +1,6 @@
 /* Стилизация логотипа в шапке */
+
+
 .logo {
     display: block;
     transition-property: text-decotation;
@@ -9,14 +11,20 @@
     font-family: var(--second-font);
     @include font-style (700, 24px, 28px, 0.03em);
     text-align: center;
-
     text-decoration: none;
+}
 
-    @media screen and (min-width: 768px) {
-        @include font-style (700, 26px, 31px, 0.03em);
+@media screen and (min-width: 768px) {
+    .logo {
+@include font-style (700, 26px, 31px, 0.03em);
+padding-top: 24px;
+padding-bottom: 24px;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .logo {
         text-align: left;
-    padding-top: 24px;
-    padding-bottom: 24px;
     }
 }
 
