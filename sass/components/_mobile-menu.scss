@@ -96,7 +96,6 @@
 
 .mobile-menu__contact-link {
     color: var(--text-color);
-
     @include font-style (500, 24px, 28px, 0.02em);
 }
 
@@ -107,12 +106,13 @@
 }
 
 .mobile-menu__socia-media-item:not(:last-child) {
-    margin-right: 20px;
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+    margin-right: 10px;
 }
 
 .mobile-menu__social-media-link {
     color: var(--acent-color);
-
+    padding-right: 10px;
     @include font-style (500, 18px, 22px, 0.02em);
 }
 }
