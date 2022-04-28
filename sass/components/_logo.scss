@@ -15,8 +15,7 @@
 }
 
 @media screen and (min-width: 768px) {
-    .logo {
-@include font-style (700, 26px, 31px, 0.03em);
+.logo {
 padding-top: 24px;
 padding-bottom: 24px;
     }
@@ -24,6 +23,7 @@ padding-bottom: 24px;
 
 @media screen and (min-width:1200px) {
     .logo {
+        @include font-style (700, 26px, 31px, 0.03em);
         text-align: left;
     }
 }

@@ -5,6 +5,7 @@
     margin-bottom: 12px;
     color: var(--extra-text-color);
     font-family: inherit;
+    text-align: center;
     @include font-style (700, 20px, 30px, 0.03em);
 
     @media screen and (min-width:1200px) {

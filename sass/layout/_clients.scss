@@ -3,12 +3,10 @@
 .clients {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     margin: -15px;
 
 .clients__item {
     display: flex;
-    align-items: center;
     margin: 15px;
 }
 }
@@ -22,7 +20,7 @@
     transition-duration: var(--transition-duration);
     transition-timing-function: var(--transition-timing-function);
 
-    width: 226px;
+    width: 210px;
     height: 92px;
 
     border: 1px solid #afb1b8;
@@ -41,8 +39,13 @@
 }
 }
 
-@media screen and (min-width:1200px) {
+@media screen and (min-width:768px) {
+    .clients__link {
+        width: 226px;
+    }
+}
 
+@media screen and (min-width:1200px) {
 .clients {
     flex-wrap: nowrap;
 }
