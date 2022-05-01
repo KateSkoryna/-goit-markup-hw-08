@@ -670,7 +670,7 @@ img {
 
 .main-form__item {
   position: relative;
-  transition-property: border-color, color;
+  transition-property: color;
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--transition-timing-function);
   display: flex;
@@ -684,7 +684,6 @@ img {
 
 .main-form__item:hover, .main-form__item:focus-within {
   color: var(--acent-color);
-  border-color: var(--acent-color);
 }
 
 .main-form__icon {

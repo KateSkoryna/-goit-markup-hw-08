@@ -22,7 +22,7 @@
 .main-form__item {
     position: relative;
 
-    transition-property: border-color, color;
+    transition-property: color;
     transition-duration: var(--transition-duration);
     transition-timing-function: var(--transition-timing-function);
 
@@ -37,8 +37,6 @@
     &:hover,
     &:focus-within {
         color: var(--acent-color);
-        border-color: var(--acent-color);
-    
     }
 }
 
