@@ -227,13 +227,6 @@ img {
   font-family: var(--second-font);
 }
 
-.page-header {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  background-color: var(--secondary-text-color);
-  border-bottom: 1px solid #ececec;
-}
-
 .page-header__container {
   display: flex;
   justify-content: space-between;
@@ -241,6 +234,10 @@ img {
 }
 
 @media screen and (max-width: 767px) {
+  .page-header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
   .page-nav__list {
     display: none;
   }
@@ -251,8 +248,8 @@ img {
 
 @media screen and (min-width: 768px) {
   .page-header {
-    padding-top: 0px;
-    padding-bottom: 0px;
+    background-color: var(--secondary-text-color);
+    border-bottom: 1px solid #ececec;
   }
   .page-nav {
     display: flex;
@@ -288,8 +285,8 @@ img {
   }
   .page-nav__link--currant::after {
     position: absolute;
-    bottom: 0;
-    display: block;
+    left: 0;
+    bottom: -2px;
     content: "";
     width: 100%;
     height: 4px;
@@ -353,14 +350,14 @@ img {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     background-color: var(--secondary-text-color);
-    overflow: scroll;
+    overflow: auto;
     z-index: 100;
     opacity: 0;
     pointer-events: none;
-    transition-duration: 250ms;
+    transition: opacity 250ms var(--transition-timing-function);
   }
   .mobile-menu.is-open {
     opacity: 1;
@@ -398,7 +395,7 @@ img {
     fill: currentColor;
   }
   .mobile-menu__list {
-    margin-bottom: 306px;
+    margin-bottom: 302px;
   }
   .mobile-menu__item:not(:last-child) {
     margin-bottom: 32px;
@@ -486,22 +483,20 @@ img {
   }
 }
 
-@media screen and (min-width: 480px) {
-  .main {
-    max-width: 1600px;
-    margin-left: auto;
-    margin-right: auto;
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/main-img/main-img-phone/header-phone.jpg);
-    background-color: #c4c4c4;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    text-align: center;
-    padding: 118px 0;
-  }
+.main {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/main-img/main-img-phone/header-phone.jpg);
+  background-color: #c4c4c4;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  padding: 118px 0;
 }
 
-@media screen and (min-width: 480px) and (min-device-pixel-ratio: 2), screen and (min-width: 480px) and (min-resolution: 192dpi), screen and (min-width: 480px) and (min-resolution: 2dppx) {
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .main {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/main-img/main-img-phone/header-phone@2x.jpg);
   }
@@ -1233,17 +1228,10 @@ img {
   margin-right: 8px;
 }
 
-@media screen and (max-width: 767px) {
-  .portfolio__item:nth-child(-n + 3) {
-    margin-bottom: 15px;
-  }
-}
-
 .portfolio__btn {
   transition-property: color, background-color, border-shadow;
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--transition-timing-function);
-  min-width: 73px;
   padding-top: 6px;
   padding-right: 22px;
   padding-bottom: 6px;
@@ -1270,6 +1258,12 @@ img {
   color: var(--secondary-text-color);
   background-color: var(--acent-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+@media screen and (max-width: 767px) {
+  .portfolio__item:nth-child(-n + 3) {
+    margin-bottom: 15px;
+  }
 }
 
 @media screen and (min-width: 768px) {

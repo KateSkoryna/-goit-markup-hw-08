@@ -1,23 +1,20 @@
 // /* Стилизация хедера и навигационной панели в шапке */
 
-.page-header {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    background-color: var(--secondary-text-color);
-    border-bottom: 1px solid #ececec;
-}
-
 .page-header__container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-
-
 // Для мобильного телефона
 
 @media screen and (max-width: 767px) {
+
+.page-header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
 .page-nav__list {
     display: none;
 }
@@ -31,8 +28,8 @@
 
 @media screen and (min-width: 768px) {
     .page-header {
-        padding-top: 0px;
-        padding-bottom: 0px;
+        background-color: var(--secondary-text-color);
+        border-bottom: 1px solid #ececec;
     }
 
     .page-nav {
@@ -73,9 +70,10 @@
         
             &::after {
                 position: absolute;
-                bottom: 0;
+                left: 0;
+                bottom: -2px;
         
-                display: block;
+                
                 content: "";
                 width: 100%;
                 height: 4px;

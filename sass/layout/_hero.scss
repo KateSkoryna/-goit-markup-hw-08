@@ -1,6 +1,4 @@
 // Стилизация главной секции для телефона
-
-@media screen and (min-width: 480px) {
     .main {
         max-width: 1600px;
         margin-left: auto;
@@ -27,7 +25,6 @@
                 url(../images/main-img/main-img-phone/header-phone@2x.jpg);
         }
     }
-}
 
 // Стилизация главной секции для планшета
 @media screen and (min-width: 768px) {
