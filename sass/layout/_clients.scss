@@ -1,15 +1,4 @@
 /* Стилизация секции партнеры для десктопа */
-@media screen and (min-width:480px) {
-.clients {
-    display: flex;
-    flex-wrap: wrap;
-    margin: -15px;
-
-.clients__item {
-    display: flex;
-    margin: 15px;
-}
-}
 
 .clients__link {
     display: flex;
@@ -36,6 +25,27 @@
 
 .clients__icon {
     fill: currentColor;
+}
+
+@media screen and (max-width: 479px) {
+    .clients__item:not(:last-child) {
+        margin-bottom: 30px;
+    }
+    .clients__link {
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width:480px) {
+.clients {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+}
+
+.clients__item {
+    display: flex;
+    margin: 15px;
 }
 }
 

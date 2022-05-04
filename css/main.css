@@ -1005,35 +1005,47 @@ img {
 }
 
 /* Стилизация секции партнеры для десктопа */
+.clients__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition-property: color, border;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
+  width: 210px;
+  height: 92px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  color: var(--team-icon-color);
+}
+
+.clients__link:hover, .clients__link:focus {
+  color: var(--acent-color);
+  border: 1px solid var(--acent-color);
+}
+
+.clients__icon {
+  fill: currentColor;
+}
+
+@media screen and (max-width: 479px) {
+  .clients__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+  .clients__link {
+    margin: 0 auto;
+  }
+}
+
 @media screen and (min-width: 480px) {
   .clients {
     display: flex;
     flex-wrap: wrap;
     margin: -15px;
   }
-  .clients .clients__item {
+  .clients__item {
     display: flex;
     margin: 15px;
-  }
-  .clients__link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition-property: color, border;
-    transition-duration: var(--transition-duration);
-    transition-timing-function: var(--transition-timing-function);
-    width: 210px;
-    height: 92px;
-    border: 1px solid #afb1b8;
-    border-radius: 4px;
-    color: var(--team-icon-color);
-  }
-  .clients__link:hover, .clients__link:focus {
-    color: var(--acent-color);
-    border: 1px solid var(--acent-color);
-  }
-  .clients__icon {
-    fill: currentColor;
   }
 }
 
