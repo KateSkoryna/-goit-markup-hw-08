@@ -299,7 +299,7 @@ img {
     padding-top: 21px;
     padding-bottom: 21px;
   }
-  .aside__item:not(:last-child) {
+  .aside__item:first-child {
     margin-bottom: 10px;
   }
   .aside__link {
@@ -335,7 +335,7 @@ img {
     padding-top: 0;
     padding-bottom: 0;
   }
-  .aside__item:not(:last-child) {
+  .aside__item:first-child {
     margin-bottom: 0px;
     margin-right: 50px;
   }
@@ -346,12 +346,27 @@ img {
 }
 
 @media screen and (max-width: 767px) {
+  .menu-btn {
+    display: block;
+    background-color: transparent;
+    color: #000;
+    border: none;
+    padding: 0;
+    line-height: 0;
+    outline: none;
+  }
+  .menu-btn:hover, .menu-btn:focus {
+    color: var(--acent-color);
+  }
+  .menu-btn__icon {
+    fill: currentColor;
+  }
   .mobile-menu {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     background-color: var(--secondary-text-color);
     overflow: auto;
     z-index: 100;
@@ -453,32 +468,10 @@ img {
 }
 
 @media screen and (min-width: 768px) {
-  .mobile-menu {
+  .menu-btn {
     display: none;
   }
-}
-
-@media screen and (max-width: 767px) {
-  .menu-btn {
-    display: block;
-    background-color: transparent;
-    color: #000;
-    border: none;
-    padding: 0;
-    line-height: 0;
-    outline: none;
-  }
-  .menu-btn:hover, .menu-btn:focus {
-    color: var(--acent-color);
-  }
-}
-
-.menu-btn__icon {
-  fill: currentColor;
-}
-
-@media screen and (min-width: 768px) {
-  .menu-btn, .menu-btn__icon {
+  .mobile-menu {
     display: none;
   }
 }
@@ -583,7 +576,7 @@ img {
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
   z-index: 2;
   opacity: 1;
-  transition-duration: 250ms;
+  transition: opacity 250ms var(--transition-timing-function);
 }
 
 .backdrop.is-hidden {
@@ -1359,7 +1352,7 @@ img {
   border-top: none;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .gallery__discription--tablet {
     padding-bottom: 58px;
   }

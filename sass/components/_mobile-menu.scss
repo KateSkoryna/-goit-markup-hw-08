@@ -1,13 +1,33 @@
 // Мобильное меню в хедере
 
 @media screen and (max-width: 767px) {
+    // Кнопка меню
+    .menu-btn {
+        display: block;
+        background-color: transparent;
+        color: #000;
+        border: none;
+        padding: 0;
+        line-height: 0;
+        outline: none;
+    
+        &:hover,
+        &:focus {
+            color: var(--acent-color);
+        }
+    }
+    
+    .menu-btn__icon {
+        fill: currentColor;
+    }
 
+    // Меню
 .mobile-menu {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     background-color: var(--secondary-text-color);
     overflow: auto;
     z-index: 100;
@@ -118,6 +138,10 @@
 }
 
 @media screen and (min-width: 768px) {
+    .menu-btn {
+        display: none;
+    }
+
     .mobile-menu {
         display: none;
     }

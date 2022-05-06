@@ -90,7 +90,7 @@
         padding-bottom: 21px;
     }
 
-    .aside__item:not(:last-child) {
+    .aside__item:first-child {
         margin-bottom: 10px;
     }
 
@@ -133,7 +133,7 @@
         padding-bottom: 0;
     }
 
-    .aside__item:not(:last-child) {
+    .aside__item:first-child {
         margin-bottom: 0px;
         margin-right: 50px;
     }

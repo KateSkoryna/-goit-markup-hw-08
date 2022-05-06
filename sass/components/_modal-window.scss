@@ -12,7 +12,7 @@
     z-index: 2;
 
     opacity: 1;
-    transition-duration: 250ms;
+    transition: opacity 250ms var(--transition-timing-function);
 
     &.is-hidden {
         opacity: 0;
