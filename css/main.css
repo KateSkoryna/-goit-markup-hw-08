@@ -521,7 +521,7 @@ img {
 }
 
 .main__title {
-  width: 360px;
+  max-width: 360px;
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 30px;
